@@ -31,12 +31,12 @@ pipeline {
         //     }
         // }
 
-        // stage('Run Selenium Tests') {
-        //     steps {
-        //         script {
-        //             sh 'node tests/TestCase/google.spec.js' //arquivo de testes
-        //         }
-        //     }
-        // }
+        stage('Run Selenium Tests') {
+            steps {
+                script {
+                    sh 'vendor/bin/phpunit tests/TestCase/google.spec.js' //arquivo de testes
+                }
+            }
+        }
     }
 }
