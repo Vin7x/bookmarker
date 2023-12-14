@@ -1,1 +1,1 @@
-{"version":1,"defects":{"PaginaInicialTest::testSomething":8},"times":{"PaginaInicialTest::testSomething":2.245}}
+{"version":1,"defects":{"PaginaInicialTest::testSomething":8,"PaginaInicialTest::testTitle":8,"GoogleTest::testTitle":5},"times":{"PaginaInicialTest::testSomething":2.245,"PaginaInicialTest::testTitle":0.644,"GoogleTest::testTitle":8.784}}
