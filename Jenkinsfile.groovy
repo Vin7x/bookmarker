@@ -34,7 +34,7 @@ pipeline {
         stage('Run Selenium Tests') {
             steps {
                 script {
-                    sh 'vendor\\bin\\phpunit tests\\GoogleTest.php' //arquivo de testes
+                    bat 'vendor\\bin\\phpunit tests\\GoogleTest.php' //arquivo de testes
                 }
             }
         }
