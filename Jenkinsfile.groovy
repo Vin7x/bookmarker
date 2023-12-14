@@ -35,10 +35,10 @@ pipeline {
             steps {
                 script {
                     // Instalação das dependências do npm (se ainda não foi feita)
-                    bash 'npm install'
+                    // start 'npm install'
 
                     // Execução do arquivo .side usando o Selenium IDE Runner
-                    // sh 'selenium-side-runner -c "chrome" -p 4444 -u http://localhost:4444/wd/hub -w 10 /tests/TestCase/googleTest.side'
+                    start  'selenium-side-runner -c "chrome" -p 4444 -u http://localhost:4444/wd/hub -w 10 /tests/TestCase/googleTest.side'
                 }
             }
         }
