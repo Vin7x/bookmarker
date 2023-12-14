@@ -38,8 +38,8 @@ pipeline {
                     // start 'npm install'
 
                     // Execução do arquivo .side usando o Selenium IDE Runner
-                    // powershell  'selenium-side-runner -c "chrome" -p 4444 -u http://localhost:4444/wd/hub -w 10 /tests/TestCase/googleTest.side'
-                    powershell  'vendor/bin/phpunit tests/googleTest.php'
+                    powershell  'selenium-side-runner -c "chrome" -p 4444 -u http://localhost:4444/wd/hub -w 10 /tests/TestCase/googleTest.side'
+                    // powershell  'vendor/bin/phpunit tests/googleTest.php'
                 }
             }
         }
