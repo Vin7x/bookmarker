@@ -34,7 +34,7 @@ pipeline {
         stage('Run Selenium Tests') {
             steps {
                 script {
-                    sh 'vendor/bin/phpunit tests/TestCase/google.spec.js' //arquivo de testes
+                    sh 'vendor/bin/phpunit tests/GoogleTest.php' //arquivo de testes
                 }
             }
         }
