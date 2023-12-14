@@ -1,0 +1,60 @@
+{
+  "id": "22b54816-ec99-4ff4-ba3f-efc48f6e1bda",
+  "version": "2.0",
+  "name": "GoogleTest",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "d04c640d-51a1-43dd-83fc-b8473467d5d2",
+    "name": "google busca",
+    "commands": [{
+      "id": "80c3a873-b73d-4813-8adb-1cc6c1b9a2e4",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "685b3561-7d84-481a-9f5b-b7e4f2bd1502",
+      "comment": "",
+      "command": "click",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c387707a-baeb-43a8-8aa1-ff6abfb9c260",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//textarea",
+      "targets": [],
+      "value": "jenkins+com+selenium+pipeline"
+    }, {
+      "id": "2484fa90-4c81-44f8-a540-c3a4e4831a1f",
+      "comment": "",
+      "command": "click",
+      "target": "name=btnK",
+      "targets": [
+        ["name=btnK", "name"],
+        ["css=center:nth-child(2) > .gNO89b", "css:finder"],
+        ["xpath=//input[@name='btnK']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "dbc65d60-0bf9-4af8-82c9-26525f0240c3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d04c640d-51a1-43dd-83fc-b8473467d5d2"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}

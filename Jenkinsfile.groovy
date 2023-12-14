@@ -31,12 +31,17 @@ pipeline {
         //     }
         // }
 
-        stage('Run Selenium Tests') {
+        stage('Run Selenium IDE Tests') {
             steps {
                 script {
-                    bat 'C:\\wamp64\\www\\bookmarker\\vendor\\bin\\phpunit.bat C:\\wamp64\\www\\bookmarker\\tests\\GoogleTest.php' //arquivo de testes
+                    // Instalação das dependências do npm (se ainda não foi feita)
+                    sh 'npm install'
+
+                    // Execução do arquivo .side usando o Selenium IDE Runner
+                    sh 'selenium-side-runner -c "chrome" -e "chromeOptions.args=[--headless]" -p 4444 -u http://localhost:4444/wd/hub -w 10 /tests/TestCase/googleTest.side'
                 }
             }
         }
+
     }
 }
