@@ -10,7 +10,7 @@ pipeline {
         stage('git') {
             steps {
                 git branch: 'dev', url: 'https://github.com/Vin7x/bookmarker.git'
-            
+                echo 'Versionamento funcionando!'
             }
          }
     }
