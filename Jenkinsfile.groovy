@@ -38,7 +38,7 @@ pipeline {
                     sh 'npm install'
 
                     // Execução do arquivo .side usando o Selenium IDE Runner
-                    sh 'selenium-side-runner -c "chrome" -e "chromeOptions.args=[--headless]" -p 4444 -u http://localhost:4444/wd/hub -w 10 /tests/TestCase/googleTest.side'
+                    sh 'selenium-side-runner -c "chrome" -p 4444 -u http://localhost:4444/wd/hub -w 10 /tests/TestCase/googleTest.side'
                 }
             }
         }
