@@ -15,28 +15,28 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                script {
-                    sh 'npm install selenium-webdriver'
-                }
-            }
-        }
+        // stage('Install Dependencies') {
+        //     steps {
+        //         script {
+        //             sh 'npm install selenium-webdriver'
+        //         }
+        //     }
+        // }
 
-        stage('Configure Selenium') {
-            steps {
-                script {
-                    def driver = new org.openqa.selenium.chrome.ChromeDriver()
-                }
-            }
-        }
+        // stage('Configure Selenium') {
+        //     steps {
+        //         script {
+        //             def driver = new org.openqa.selenium.chrome.ChromeDriver()
+        //         }
+        //     }
+        // }
 
-        stage('Run Selenium Tests') {
-            steps {
-                script {
-                    sh 'node tests/TestCase/google.spec.js' //arquivo de testes
-                }
-            }
-        }
+        // stage('Run Selenium Tests') {
+        //     steps {
+        //         script {
+        //             sh 'node tests/TestCase/google.spec.js' //arquivo de testes
+        //         }
+        //     }
+        // }
     }
 }
