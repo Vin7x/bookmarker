@@ -34,7 +34,7 @@ pipeline {
         stage('Run Selenium Tests') {
             steps {
                 script {
-                    sh 'node google.spec.js' //arquivo de testes
+                    sh 'node tests/TestCase/google.spec.js' //arquivo de testes
                 }
             }
         }
