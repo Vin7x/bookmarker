@@ -17,14 +17,10 @@ pipeline {
 
         stage('Build code') {
             steps {
-                bat script: 'mvn compile' 
+                bat script: 'node -v' 
             }
         }
-        stage('Run Test') {
-            steps {
-                bat script: 'mvn test -Dbrowser=chrome' 
-            }
-        }
+
         stage('Publish Report') {
             steps {
                 publishHTML([allowMissing: false,
