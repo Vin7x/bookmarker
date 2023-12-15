@@ -15,38 +15,26 @@ pipeline {
             }
         }
 
-        // stage('Install Dependencies') {
-        //     steps {
-        //         script {
-        //             sh 'npm install selenium-webdriver'
-        //         }
-        //     }
-        // }
-
-        // stage('Configure Selenium') {
-        //     steps {
-        //         script {
-        //             def driver = new org.openqa.selenium.chrome.ChromeDriver()
-        //         }
-        //     }
-        // }
-
-        stage('Run Selenium IDE Tests') {
+        stage('Build code') {
             steps {
-                script {
-                    // Instalação das dependências do npm (se ainda não foi feita)
-                    // start 'npm install'
-
-                    // Execução do arquivo .side usando o Selenium IDE Runner
-                    // powershell  'selenium-side-runner -c "chrome" -p 4444 -u http://localhost:4444/wd/hub -w 10 /tests/TestCase/googleTest.side'
-                    echo 'Selenium IDE Runner sendo instalado...'
-                    powershell 'npm install -g selenium-side-runner'
-                    echo 'Localizando Selenium IDE Runner...'
-                    powershell 'Get-Command selenium-side-runner'
-                    echo 'Selenium IDE Runner instalado!'
-                    powershell 'selenium-side-runner --version'
-                    // powershell  'selenium-side-runner C:\\wamp64\\www\\bookmarker\\tests\\TestCase\\GoogleTest_v2.side'
-                }
+                bat script: 'mvn compile' 
+            }
+        }
+        stage('Run Test') {
+            steps {
+                bat script: 'mvn test -Dbrowser=chrome' 
+            }
+        }
+        stage('Publish Report') {
+            steps {
+                publishHTML([allowMissing: false,
+                 alwaysLinkToLastBuild: true, 
+                 keepAll: true, 
+                 reportDir: '', 
+                 reportFiles: 'index.html', 
+                 reportName: 'HTML Report', 
+                 reportTitles: '', 
+                 useWrapperFileDirectly: true]) 
             }
         }
 
