@@ -33,6 +33,11 @@ pipeline {
                  useWrapperFileDirectly: true]) 
             }
         }
+        stage('selenium tests') {
+            steps {
+                bat script: 'node C:\\wamp64\\www\\bookmarker\\tests\\TestCase\\login.js'
+            }
+        }
 
     }
 }
