@@ -35,7 +35,7 @@ pipeline {
         }
         stage('install selenium webdriver') {
             steps {
-                bat script: 'npm selenium-webdriver install'
+                bat script: 'npm install selenium-webdriver'
             }
         stage('selenium tests') {
             steps {
