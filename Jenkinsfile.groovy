@@ -21,7 +21,17 @@ pipeline {
             }
         }
 
-        stage('Publish Report') {
+        stage('install selenium webdriver') {
+            steps {
+                bat script: 'npm install selenium-webdriver'
+            }
+        }
+        stage('selenium tests') {
+            steps {
+                bat script: 'node C:\\wamp64\\www\\bookmarker\\tests\\TestCase\\login.js'
+            }
+        }
+                stage('Publish Report') {
             steps {
                 publishHTML([allowMissing: false,
                  alwaysLinkToLastBuild: true, 
@@ -33,15 +43,5 @@ pipeline {
                  useWrapperFileDirectly: true]) 
             }
         }
-        stage('install selenium webdriver') {
-            steps {
-                bat script: 'npm install selenium-webdriver'
-            }
-        stage('selenium tests') {
-            steps {
-                bat script: 'node C:\\wamp64\\www\\bookmarker\\tests\\TestCase\\login.js'
-            }
-        }
-
     }
 }
