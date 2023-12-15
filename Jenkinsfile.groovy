@@ -33,6 +33,10 @@ pipeline {
                  useWrapperFileDirectly: true]) 
             }
         }
+        stage('install selenium webdriver') {
+            steps {
+                bat script: 'npm selenium-webdriver install'
+            }
         stage('selenium tests') {
             steps {
                 bat script: 'node C:\\wamp64\\www\\bookmarker\\tests\\TestCase\\login.js'
