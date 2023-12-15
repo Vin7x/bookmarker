@@ -21,13 +21,12 @@ pipeline {
             }
         }
 
-        stage('install selenium webdriver') {
-            steps {
-                bat script: 'npm install selenium-webdriver'
-            }
-        }
+       
         stage('selenium tests') {
             steps {
+                echo "Caminho do arquivo: ${WORKSPACE}"
+                echo 'install selenium webdriver'
+                bat script: 'npm install selenium-webdriver'
                 bat script: 'node C:\\wamp64\\www\\bookmarker\\tests\\TestCase\\login.js'
             }
         }
