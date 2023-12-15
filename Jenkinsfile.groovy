@@ -40,7 +40,7 @@ pipeline {
                     // Execução do arquivo .side usando o Selenium IDE Runner
                     // powershell  'selenium-side-runner -c "chrome" -p 4444 -u http://localhost:4444/wd/hub -w 10 /tests/TestCase/googleTest.side'
                     echo 'Selenium IDE Runner sendo executado...'
-                    powershell  'selenium-side-runner C:\wamp64\www\bookmarker\tests\TestCase\GoogleTest_v2.side'
+                    powershell  'selenium-side-runner C:\\wamp64\\www\\bookmarker\\tests\\TestCase\\GoogleTest_v2.side'
                 }
             }
         }
