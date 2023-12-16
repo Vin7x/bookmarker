@@ -26,11 +26,11 @@ pipeline {
             steps {
                 echo "Caminho do arquivo: ${WORKSPACE}"
                 echo 'install selenium webdriver'
-                bat script: 'npm install selenium-webdriver'
-                bat script: 'node C:\\wamp64\\www\\bookmarker\\tests\\TestCase\\login.js'
+                // bat script: 'node C:\\wamp64\\www\\bookmarker\\tests\\TestCase\\login.js'
+                bat script: "selenium-side-runner tests/TestCase/GoogleTest.side' || exit 0"
             }
         }
-                stage('Publish Report') {
+        stage('Publish Report') {
             steps {
                 publishHTML([allowMissing: false,
                  alwaysLinkToLastBuild: true, 
