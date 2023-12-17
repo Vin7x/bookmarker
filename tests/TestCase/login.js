@@ -4,7 +4,7 @@ const assert = require('assert');
 (async function firstScript() {
   try {
     let driver = await new Builder()
-    .forBrowser('firefox')
+    .forBrowser('chrome')
     .build();
 
     await driver.get('http://10.120.100.163/paivav/pgedigital/processo-administrativo');
