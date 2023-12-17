@@ -18,7 +18,7 @@ const assert = require('assert');
     let Button = await driver.findElement(By.className('btn btn-lg btn-primary btn-block'));
 
     await login.sendKeys('paivav');
-    await senha.sendKeys('18309210V!N!1');
+    await senha.sendKeys('1122334455V!');
     await Button.click();
 
     // let value = await searchBox.getAttribute("value");
