@@ -7,7 +7,7 @@ const assert = require('assert');
     .forBrowser('chrome')
     .build();
 
-    await driver.get('http://10.120.100.163/paivav/pgedigital/processo-administrativo');
+    await driver.get('http://10.120.100.168/paivav/pgedigital/processo-administrativo');
 
     await driver.getTitle();
 
