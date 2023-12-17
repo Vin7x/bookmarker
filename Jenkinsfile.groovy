@@ -25,9 +25,9 @@ pipeline {
         stage('selenium tests') {
             steps {
                 echo "Caminho do arquivo: ${WORKSPACE}"
-                echo 'install selenium webdriver'
                 // bat script: 'node C:\\wamp64\\www\\bookmarker\\tests\\TestCase\\login.js'
-                bat script: "selenium-side-runner tests/TestCase/GoogleTest.side' || exit 0"
+                bat script: "selenium-side-runner tests/TestCase/GoogleTest.side || exit 0"
+                bat script: "node tests/TestCase/login.js || exit 0"
             }
         }
         stage('Publish Report') {
