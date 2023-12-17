@@ -8,8 +8,10 @@ const assert = require('assert');
     .build();
 
     await driver.get('http://10.120.100.168/paivav/pgedigital/processo-administrativo');
+    console.log('Navegador aberto com sucesso!');
 
     await driver.getTitle();
+    console.log('Tela carregada com sucesso!');
 
     await driver.manage().setTimeouts({implicit: 1000})
 
@@ -18,7 +20,9 @@ const assert = require('assert');
     let Button = await driver.findElement(By.className('btn btn-lg btn-primary btn-block'));
 
     await login.sendKeys('paivav');
+    console.log('Login efetuado com sucesso!');
     await senha.sendKeys('1122334455V!');
+    console.log('Senha efetuada com sucesso!');
     await Button.click();
 
     // let value = await searchBox.getAttribute("value");
