@@ -25,7 +25,8 @@ const assert = require('assert');
     // assert.deepStrictEqual(value, "Selenium")
 
     // await driver.quit();
+    print("Login realizado com sucesso");
   } catch (error) {
-    console.log(error)
+    print(error);
   }
 })();
