@@ -28,7 +28,7 @@
       "value": ""
     }, {
       "id": "c387707a-baeb-43a8-8aa1-ff6abfb9c260",
-      "comment": "",
+      "comment": "Pesquisando no google",
       "command": "type",
       "target": "xpath=//textarea",
       "targets": [],
