@@ -30,6 +30,7 @@ pipeline {
                 echo "executando selenium via node"
                 // bat script: "npm install selenium-webdriver"
                 bat script: "node tests/TestCase/googleTest.js || exit 0"
+                bat script: "node tests/TestCase/login.js || exit 0"
             }
         }
         stage('Publish Report') {
