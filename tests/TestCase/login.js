@@ -31,6 +31,6 @@ const assert = require('assert');
     // await driver.quit();
     console.log("Teste bem-sucedido!");
   } catch (error) {
-    print(error);
+    console.log(error);
   }
 })();
