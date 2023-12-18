@@ -32,5 +32,12 @@ const assert = require('assert');
     console.log("Teste bem-sucedido!");
   } catch (error) {
     console.log(error);
+    if (error == "net::ERR_CONNECTION_TIMED_OUT") {
+      console.log("Erro no tempo de resposta com o servidor!");
+      console.log("Testando conexao com a Internet!");
+      await driver.get('http://10.120.100.168/paivav/pgedigital/processo-administrativo');
+    console.log('Navegador aberto com sucesso!');
+      
+    }
   }
 })();
