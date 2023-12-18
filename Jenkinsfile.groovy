@@ -28,7 +28,7 @@ pipeline {
                 echo "executando selenium-side-runner"
                 bat script: "selenium-side-runner tests/TestCase/GoogleTest.side || exit 0"
                 echo "executando selenium via node"
-                bat script: "npm install selenium-webdriver"
+                // bat script: "npm install selenium-webdriver"
                 bat script: "node tests/TestCase/login.js || exit 0"
             }
         }
