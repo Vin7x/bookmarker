@@ -7,7 +7,9 @@ describe('google', function() {
   let driver
   let vars
   beforeEach(async function() {
-    driver = await new Builder().forBrowser('chrome').usingServer('http://localhost:4444/wd/hub').build()
+    driver = await new Builder()
+    .forBrowser('chrome')
+    .build()
     vars = {}
   })
   afterEach(async function() {
