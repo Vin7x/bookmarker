@@ -40,5 +40,10 @@ pipeline {
                  useWrapperFileDirectly: true]) 
             }
         }
+        post {
+            always {
+                chucknorris();
+            }
+        }
     }
 }

@@ -55,8 +55,8 @@ describe('CT01 - PGEDigital', function() {
     await driver.findElement(By.css(".dropdown li:nth-child(11) > a")).click()
     await driver.findElement(By.css("#menu_principal > li:nth-child(3) > a")).click()
     console.log("Teste bem-sucedido!");
-  } catch (e) {
-    console.log('erro; ', e)
-  }
+    } catch (e) {
+      console.log('erro; ', e)
+    }
   })
 })
