@@ -1,12 +1,14 @@
 name: Continuos Integration
 
-on:
-    push:
-        branches:
-            - dev
+on: pull_request
 
 jobs:
     continuous-integration:
         runs-on: ubuntu-latest
+        name: Continuous Integration
         steps:
             - uses: actions/checkout@v2
+
+            - name: Install dependencies
+              run: npm install
+              
