@@ -1,0 +1,12 @@
+name: Continuos Integration
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    continuous-integration:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
