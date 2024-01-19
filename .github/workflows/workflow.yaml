@@ -21,4 +21,4 @@ jobs:
               run: npm install
         
             - name: Run Selenium tests
-              run: npm test -- tests/TestCase/Selenium/js/NavBarPgedigital.spec.js
+              run: node tests/TestCase/Selenium/js/NavBarPgedigital.spec.js
