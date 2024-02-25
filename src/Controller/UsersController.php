@@ -102,4 +102,11 @@ class UsersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function getUsers()
+    {
+        $users = $this->Users->find('all');
+        debug($users);
+        $this->set(compact('users'));
+    }
 }
